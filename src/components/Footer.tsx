@@ -2,6 +2,7 @@ import React from 'react';
 import { Bell } from 'lucide-react';
 import SAMAGRA from  "../assets/433412257_810369917779710_6154004774464875398_n.jpg";
 import UTTARAKHAND from "../assets/Seal_of_Uttarakhand.svg.png";
+import IHFC from "../assets/WhatsApp Image 2024-09-02 at 17.04.36_662e9805.jpg" ;
 
 const Footer = () => {
   return (
@@ -10,7 +11,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1">
             <img 
-              src="https://ihfc.co.in/wp-content/uploads/2023/12/IHFC-Logo.png" 
+              src={IHFC}
               alt="IHFC Logo" 
               className="h-16 mb-4"
             />
