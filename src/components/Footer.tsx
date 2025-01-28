@@ -1,5 +1,7 @@
 import React from 'react';
 import { Bell } from 'lucide-react';
+import SAMAGRA from  "../assets/433412257_810369917779710_6154004774464875398_n.jpg";
+import UTTARAKHAND from "../assets/Seal_of_Uttarakhand.svg.png";
 
 const Footer = () => {
   return (
@@ -60,12 +62,12 @@ const Footer = () => {
             <p className="text-gray-400">© 2024 IHFC-TIH, IIT Delhi. All Rights Reserved.</p>
             <div className="flex items-center space-x-4">
               <img 
-                src="https://samagra.education/wp-content/uploads/2023/12/samagra-shiksha-logo.png" 
+                src={SAMAGRA}
                 alt="Samagra Shiksha Logo" 
                 className="h-8"
               />
               <img 
-                src="https://uttarakhand.gov.in/writereaddata/Portal/Images/UK_Logo.png" 
+                src={UTTARAKHAND} 
                 alt="Uttarakhand Logo" 
                 className="h-10"
               />
