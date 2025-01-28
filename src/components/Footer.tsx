@@ -1,21 +1,21 @@
 import React from 'react';
 import { Bell } from 'lucide-react';
-import SAMAGRA from  "../assets/433412257_810369917779710_6154004774464875398_n.jpg";
+import SAMAGRA from "../assets/433412257_810369917779710_6154004774464875398_n.jpg";
 import UTTARAKHAND from "../assets/Seal_of_Uttarakhand.svg.png";
-import IHFC from "../assets/WhatsApp Image 2024-09-02 at 17.04.36_662e9805.jpg" ;
+import IHFC from "../assets/WhatsApp Image 2024-09-02 at 17.04.36_662e9805.jpg";
 
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           <div className="col-span-1">
             <img 
               src={IHFC}
               alt="IHFC Logo" 
-              className="h-16 mb-4"
+              className="h-16 mb-4 mx-auto sm:mx-0"
             />
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-400 text-sm text-center sm:text-left">
               Technology Innovation Hub of IIT Delhi
             </p>
           </div>
@@ -59,18 +59,20 @@ const Footer = () => {
         </div>
         
         <div className="mt-12 pt-8 border-t border-gray-800">
-          <div className="flex justify-between items-center">
-            <p className="text-gray-400">© 2024 IHFC-TIH, IIT Delhi. All Rights Reserved.</p>
-            <div className="flex items-center space-x-4">
+          <div className="flex justify-between items-center flex-wrap">
+            <p className="text-gray-400 text-center sm:text-left">
+              © 2024 IHFC-TIH, IIT Delhi. All Rights Reserved.
+            </p>
+            <div className="flex items-center space-x-4 mt-4 sm:mt-0">
               <img 
                 src={SAMAGRA}
                 alt="Samagra Shiksha Logo" 
-                className="h-8"
+                className="h-8 sm:h-10"
               />
               <img 
                 src={UTTARAKHAND} 
                 alt="Uttarakhand Logo" 
-                className="h-10"
+                className="h-10 sm:h-12"
               />
             </div>
           </div>
