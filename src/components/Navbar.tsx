@@ -27,8 +27,7 @@ const Navbar = () => {
               <Download size={20} />
               <a
                 href="https://expo.dev/artifacts/eas/3AZEouTHzRmhQRB6G1xYDg.apk"
-                classNam
-                e="cta-button"
+                className="cta-button"
               >
                 Download App
               </a>
