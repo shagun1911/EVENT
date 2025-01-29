@@ -1,24 +1,34 @@
 import React from 'react';
-import { Calendar, MapPin, Clock, Download, Bell, Users, BookOpen, School, Award } from 'lucide-react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Schedule from './components/Schedule';
 import About from './components/About';
 import DaySchedule from './components/DaySchedule';
 import Location from './components/Location';
 import Footer from './components/Footer';
+import Feedback from './components/Feedback';
+import Schedule from './pages/Schedule'; // Import the Schedule Page
 
 function App() {
   return (
-    <div className="min-h-screen bg-white">
-      <Navbar />
-      <Hero />
-      <About />
-      <Schedule />
-      <DaySchedule />
-      <Location />
-      <Footer />
-    </div>
+    <Router>
+      <div className="min-h-screen bg-white">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Hero />
+              <About />
+              <DaySchedule />
+              <Feedback />
+              <Location />
+            </>
+          } />
+          <Route path="/schedule" element={<Schedule />} />
+        </Routes>
+        <Footer /> 
+      </div>
+    </Router>
   );
 }
 

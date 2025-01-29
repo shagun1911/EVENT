@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { Download } from "lucide-react";
-import SAMAGRA from "../assets/433412257_810369917779710_6154004774464875398_n.jpg";
-import IHFC from "../assets/WhatsApp Image 2024-09-02 at 17.04.36_662e9805.jpg";
+import SAMAGRA from "../assets/samagrashiksha logo.png";
+import IHFC from "../assets/IHFC.png";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -24,53 +25,102 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#about" className="text-gray-700 hover:text-blue-600 transition duration-300">
+            <Link
+              to="/"
+              className="text-gray-700 hover:text-blue-600 transition duration-300"
+            >
+              Home
+            </Link>
+            <a
+              href="#about"
+              className="text-gray-700 hover:text-blue-600 transition duration-300"
+            >
               About
             </a>
-            <a href="#schedule" className="text-gray-700 hover:text-blue-600 transition duration-300">
+            <Link
+              to="/schedule"
+              className="text-gray-700 hover:text-blue-600 transition duration-300"
+            >
               Schedule
-            </a>
-            <a href="#location" className="text-gray-700 hover:text-blue-600 transition duration-300">
+            </Link>
+            <a
+              href="#location"
+              className="text-gray-700 hover:text-blue-600 transition duration-300"
+            >
               Location
             </a>
-            <button className="bg-blue-600 text-white px-4 py-2 rounded-md flex items-center space-x-2 hover:bg-blue-700 transition duration-300">
+            <a
+              href="https://expo.dev/artifacts/eas/3AZEouTHzRmhQRB6G1xYDg.apk"
+              className="bg-blue-600 text-white px-4 py-2 rounded-md flex items-center space-x-2 hover:bg-blue-700 transition duration-300"
+            >
               <Download size={20} />
-              <a
-                href="https://expo.dev/artifacts/eas/3AZEouTHzRmhQRB6G1xYDg.apk"
-                className="cta-button"
-              >
-                Download App
-              </a>
-            </button>
+              <span>Download App</span>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center" onClick={toggleMobileMenu}>
-            <button className="text-gray-700 hover:text-blue-600">
-              <span className="block w-6 h-0.5 bg-gray-700 mb-1"></span>
-              <span className="block w-6 h-0.5 bg-gray-700 mb-1"></span>
-              <span className="block w-6 h-0.5 bg-gray-700"></span>
+          <div className="md:hidden flex items-center">
+            <button
+              onClick={toggleMobileMenu}
+              className="text-gray-700 hover:text-blue-600 focus:outline-none"
+              aria-label="Toggle menu"
+            >
+              <span
+                className="block w-6 h-0.5 bg-gray-700 mb-1"
+                aria-hidden="true"
+              ></span>
+              <span
+                className="block w-6 h-0.5 bg-gray-700 mb-1"
+                aria-hidden="true"
+              ></span>
+              <span
+                className="block w-6 h-0.5 bg-gray-700"
+                aria-hidden="true"
+              ></span>
             </button>
           </div>
         </div>
 
         {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden flex flex-col items-center space-y-4 mt-4 bg-white shadow-lg rounded-md py-4">
-            <a href="#about" className="text-gray-700 hover:text-blue-600 transition duration-300">About</a>
-            <a href="#schedule" className="text-gray-700 hover:text-blue-600 transition duration-300">Schedule</a>
-            <a href="#location" className="text-gray-700 hover:text-blue-600 transition duration-300">Location</a>
-            <button className="bg-blue-600 text-white px-4 py-2 rounded-md flex items-center space-x-2 hover:bg-blue-700 transition duration-300">
-              <Download size={20} />
-              <a
-                href="https://expo.dev/artifacts/eas/3AZEouTHzRmhQRB6G1xYDg.apk"
-                className="cta-button"
-              >
-                Download App
-              </a>
-            </button>
-          </div>
-        )}
+        <div
+          className={`md:hidden flex flex-col items-center space-y-4 mt-4 bg-white shadow-lg rounded-md py-4 transition-transform duration-300 ${
+            isMobileMenuOpen
+              ? "translate-y-0 opacity-100"
+              : "-translate-y-10 opacity-0 pointer-events-none"
+          }`}
+        >
+          <Link
+            to="/"
+            className="text-gray-700 hover:text-blue-600 transition duration-300"
+          >
+            Home
+          </Link>
+          <a
+            href="#about"
+            className="text-gray-700 hover:text-blue-600 transition duration-300"
+          >
+            About
+          </a>
+          <Link
+            to="/schedule"
+            className="text-gray-700 hover:text-blue-600 transition duration-300"
+          >
+            Schedule
+          </Link>
+          <a
+            href="#location"
+            className="text-gray-700 hover:text-blue-600 transition duration-300"
+          >
+            Location
+          </a>
+          <a
+            href="https://expo.dev/artifacts/eas/3AZEouTHzRmhQRB6G1xYDg.apk"
+            className="bg-blue-600 text-white px-4 py-2 rounded-md flex items-center space-x-2 hover:bg-blue-700 transition duration-300"
+          >
+            <Download size={20} />
+            <span>Download App</span>
+          </a>
+        </div>
       </div>
     </nav>
   );

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Calendar, MapPin } from 'lucide-react';
-import SAMAGRA from "../assets/433412257_810369917779710_6154004774464875398_n.jpg";
-import IHFC from "../assets/WhatsApp Image 2024-09-02 at 17.04.36_662e9805.jpg";
-import UTTARAKHAND from "../assets/Seal_of_Uttarakhand.svg.png";
-import COGRAD from "../assets/cograd_logo.jpeg";
+import SAMAGRA from  "../assets/samagrashiksha logo.png";
+import IHFC from "../assets/IHFC.png" ;
+import UTTARAKHAND from "../assets/Seal_of_Uttarakhand.svg-removebg-preview.png";
+
 
 const Hero = () => {
   return (
@@ -72,11 +72,6 @@ const Hero = () => {
                 src={SAMAGRA}
                 alt="Samagra Shiksha Logo" 
                 className="h-8 sm:h-10 md:h-12"
-              />
-              <img 
-                src={COGRAD}
-                alt="Cograd Logo" 
-                className="h-10 sm:h-12 md:h-14"
               />
             </div>
           </div>

@@ -1,7 +1,7 @@
 
 import { Users, BookOpen, School, Award } from 'lucide-react';
-import SAMAGRA from  "../assets/433412257_810369917779710_6154004774464875398_n.jpg";
-import IHFC from "../assets/WhatsApp Image 2024-09-02 at 17.04.36_662e9805.jpg" ;
+import SAMAGRA from  "../assets/samagrashiksha logo.png";
+import IHFC from "../assets/IHFC.png" ;
 
 const About = () => {
   return (
